@@ -35,7 +35,7 @@ function Header() {
 
             {/* input field, delete button, search icon */}
             <form className='flex flex-grow border border-gray-200 rounded-full shadow-md max-w-2xl items-center px-3 py-2 ml-1 mr-5'>
-                <input ref={searchInputRef} type='text' className='flex-grow w-full focus:outline-none'/>
+                <input ref={searchInputRef} type='text' className='flex-grow w-full focus:outline-none' defaultValue={router.query.term}/>
                 <XIcon onClick={() => (searchInputRef.current.value = "")} className='h-7 text-gray-500 cursor-pointer sm:mr-3' />
                 <SearchIcon className='h-6 text-blue-500 hidden sm:inline-flex' />
                 <button hidden type='submit' onClick={setTerm}></button>
